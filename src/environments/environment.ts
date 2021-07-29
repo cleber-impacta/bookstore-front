@@ -3,9 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
+  production: true,
   baseUrl: 'https://csv-backend-bookstore-api.herokuapp.com/'
-  //baseUrl: 'http://localhost:8080/'
 };
 
 /*

@@ -1,0 +1,49 @@
+<div class="content">
+    <div class="title">
+        <h1>Livros</h1>
+    </div>
+
+    <div class="mat-elevation-z8 content-table">
+        <table class="table" mat-table [dataSource]="livros">
+
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> ID </th>
+                <td mat-cell *matCellDef="let row"> {{ row.id }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="titulo">
+                <th mat-header-cell *matHeaderCellDef> Titulo </th>
+                <td mat-cell *matCellDef="let row"> {{ row.titulo }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="livros">
+                <th mat-header-cell *matHeaderCellDef> Ler livro </th>
+                <td mat-cell *matCellDef="let row">
+                    <a class="livros" routerLink="{{ row.id }}/read">
+                        <i class="material-icons">auto_stories</i>
+                    </a>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="acoes">
+                <th class="mat-header" mat-header-cell *matHeaderCellDef> Ações </th>
+                <td mat-cell *matCellDef="let row">
+                    <a class="edit" routerLink="{{ row.id }}/update">
+                      <i class="material-icons">edit</i>
+                    </a>
+                    <a class="delete" routerLink="{{ row.id }}/delete">
+                      <i class="material-icons">delete</i>
+                    </a>
+                  </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+
+    <div class="btn">
+        <button class="btn_cancelar mat-elevation-z8" (click)="cancel()" mat-stroked-button color="warn">Cancelar</button>
+        <button class="mat-elevation-z8" (click)="navegarCriarLivro()" mat-stroked-button color="primary">Incluir Livro</button>
+    </div>
+</div>

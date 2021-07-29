@@ -1,0 +1,29 @@
+form {
+    text-align: center;
+    width: 70%;
+    margin: 2rem auto 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+.form {
+    width: 100%;
+}
+
+.btn {
+    width: 100%;
+    text-align: end;
+}
+
+.btn_cancelar {
+    margin-right: .5rem;
+}
+
+button {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
